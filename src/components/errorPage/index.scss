@@ -1,0 +1,66 @@
+.para-error-page {
+  text-align: center;
+  display: table;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity .5s;
+
+  & > div {
+    vertical-align: middle;
+    display: table-cell;
+  }
+
+  .tips {
+    font-size: 120px;
+    color: #0676df;
+    font-weight: bold;
+    text-shadow: -1px -1px #024d9a;
+  }
+
+  .tips1 {
+    font-size: 22px;
+    font-weight: bold;
+    color: #0377df;
+    margin: 10px 0 5px 0;
+  }
+
+  .tips2 {
+    background: #f3f3f3;
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 50px;
+    min-width: 350px;
+    color: #5d5d5d;
+    margin: 5px 0;
+    font-weight: bold;
+  }
+
+  .tips3 {
+    font-size: 12px;
+    color: #d0cbcb;
+  }
+
+  .img {
+    position: relative;
+    text-align: center;
+  }
+
+  .line {
+    background: #e5e5e5;
+    height: 5px;
+    display: inline-block;
+    width: 180px;
+    border-radius: 10px;
+    margin: 0 1px;
+  }
+
+  .line-box {
+    line-height: 15px;
+  }
+
+  .line-icon {
+    position: relative;
+    top: 6px;
+  }
+}

@@ -1,0 +1,120 @@
+$color: #428bfe;
+$loadingWH: 40px;
+
+
+.para-loading {
+  display: table;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.9);
+  opacity: 0;
+  transition: opacity .5s;
+  text-align: center;
+
+  &-icon {
+    display: table-cell;
+    vertical-align: middle;
+    margin: calc(100% / 2 - #{$loadingWH * 2}) auto;
+    position: relative;
+  }
+
+  &-icon > &-item {
+    position: absolute;
+    animation: para-loading-keyframes1 2s linear infinite;
+    width: $loadingWH;
+    height: $loadingWH;
+    background: $color;
+    left: calc((100% - #{$loadingWH}) / 2);
+    top: calc((100% - #{$loadingWH}) / 2 - 15px);
+    border-radius: 8px;
+    opacity: 0;
+
+    &:nth-child(2) {
+      animation: para-loading-keyframes2 1.5s linear infinite;
+    }
+
+    &:nth-child(1) {
+      animation: para-loading-keyframes3 3s linear infinite;
+    }
+
+    &:nth-child(3) {
+      animation: para-loading-keyframes4 2s linear infinite;
+    }
+  }
+
+  &-msg {
+    width: 100%;
+    text-align: center;
+    color: $color;
+    font-size: 17px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-top: calc(#{$loadingWH} + 30px);
+  }
+}
+
+
+@keyframes para-loading-keyframes1 {
+  0% {
+    transform: rotate(0deg);
+    opacity: .3;
+
+  }
+  50% {
+    transform: rotate(180deg);
+    opacity: .8;
+  }
+  100% {
+    transform: rotate(360deg);
+    opacity: .3;
+  }
+}
+
+@keyframes para-loading-keyframes2 {
+  0% {
+    transform: rotate(0deg);
+    opacity: .3;
+
+  }
+  50% {
+    transform: rotate(180deg);
+    opacity: .8;
+  }
+  100% {
+    transform: rotate(360deg);
+    opacity: .3;
+  }
+}
+
+@keyframes para-loading-keyframes3 {
+  0% {
+    transform: rotate(360deg);
+    opacity: .3;
+
+  }
+  50% {
+    transform: rotate(180deg);
+    opacity: .8;
+  }
+  100% {
+    transform: rotate(0deg);
+    opacity: .3;
+  }
+}
+
+@keyframes para-loading-keyframes4 {
+  0% {
+    transform: rotate(360deg);
+    opacity: .2
+
+  }
+  50% {
+    transform: rotate(180deg);
+    opacity: .5;
+  }
+  100% {
+    transform: rotate(0deg);
+    opacity: .2
+  }
+}
+

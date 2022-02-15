@@ -1,0 +1,13 @@
+.para-header {
+  width: 100%;
+  height: 100%;
+  background-color: white;
+
+  .paraui-page-header {
+    justify-content: left;
+
+    .paraui-page-header-left {
+      width: 100%;
+    }
+  }
+}

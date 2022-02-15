@@ -1,0 +1,38 @@
+.home {
+  color: #282c34;
+  text-align: center;
+  padding-top: 15%;
+
+  .title {
+    & > * {
+      vertical-align: middle;
+    }
+
+    img {
+      height: 120px;
+    }
+
+    .label {
+      font-size: 70px;
+      margin-left: 30px;
+    }
+  }
+
+  .info {
+    margin-top: 60px;
+    font-size: 20px;
+  }
+
+  .locales-text {
+    margin: 5px;
+    cursor: pointer;
+
+    &:hover {
+      opacity: .8;
+    }
+
+    &:active {
+      opacity: .5;
+    }
+  }
+}

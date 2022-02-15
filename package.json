@@ -1,0 +1,72 @@
+{
+  "name": "para-react-cli",
+  "version": "2.0.1",
+  "private": true,
+  "description": "Powered by Para FED",
+  "author": "HKLMTT",
+  "license": "ParaView",
+  "dependencies": {
+    "@para-snack/core": "2.0.0",
+    "@para-ui/core": "^2.0.0",
+    "@para-ui/icons": "^2.0.0",
+    "@paraview/lib": "^2.0.0",
+    "core-js": "^3.21.0",
+    "react": "^17.0.2",
+    "react-app-polyfill": "^2.0.0",
+    "react-dom": "^17.0.2",
+    "react-intl-hooks": "^1.0.11",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "4.0.3"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.1.0",
+    "@testing-library/user-event": "^12.1.10",
+    "@types/jest": "^26.0.15",
+    "@types/node": "^12.0.0",
+    "@types/react": "^17.0.0",
+    "@types/react-dom": "^17.0.0",
+    "@types/react-router-dom": "^5.1.7",
+    "customize-cra": "^1.0.0",
+    "node-sass": "^6.0.0",
+    "react-app-rewire-multiple-entry": "^2.2.1",
+    "react-app-rewired": "^2.1.8",
+    "react-error-overlay": "^6.0.9",
+    "typescript": "^4.1.2",
+    "web-vitals": "^1.0.1"
+  },
+  "scripts": {
+    "start": "node run dev && react-app-rewired start",
+    "build": "node run && react-app-rewired build",
+    "test": "react-app-rewired test",
+    "eject": "react-app-rewired eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      "ie > 10",
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "ie > 10",
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "dev": {
+    "debug": [
+      "http://192.168.7.27",
+      "http://192.168.3.1:10000",
+      "http://192.168.2.83:10000",
+      "http://10.10.2.48:10000"
+    ]
+  }
+}
