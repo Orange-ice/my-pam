@@ -43,5 +43,5 @@ const init = async (debug: Array<string> = []) => {
 };
 
 /* @dynamic init */
-init(["http://192.168.7.27","http://192.168.3.1:10000","http://192.168.2.83:10000","http://10.10.2.48:10000"])
+init(["http://192.168.7.27"])
 /* @dynamic end */
