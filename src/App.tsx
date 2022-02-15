@@ -1,6 +1,6 @@
 import React from 'react';
 import {IntlProvider} from "react-intl-hooks"; // 国际化
-import Global from './context/global'
+import {GlobalContext} from './context/global'
 import Router from './Router';
 import Menu from './components/layout/menu';
 import Header from './components/layout/header';
@@ -35,7 +35,7 @@ function App(props: IProps) {
         saveDefaultLocale(locale);
     }, [locale]);
     return (
-        <Global.Provider
+        <GlobalContext.Provider
             value={{
                 sdk,
                 setLocale,
@@ -61,7 +61,7 @@ function App(props: IProps) {
                     />
                 </ParaUIProvider>
             </IntlProvider>
-        </Global.Provider>
+        </GlobalContext.Provider>
     );
 }
 

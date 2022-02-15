@@ -1,12 +1,12 @@
 // 全局公用数据Context
 
 import React from 'react';
-import {LocaleConfig} from '../locale/index'
+import {LocaleConfig} from '../locale';
 import {MessageObject} from '@para-ui/core/Message';
 import {ConfirmObject} from '@para-ui/core/Modal';
 import {SnackSDK} from "@para-snack/core";
 
-interface GlbalProps {
+interface GlobalProps {
     sdk: SnackSDK,
     // 国际化
     setLocale: Function, // 设置语言
@@ -25,7 +25,7 @@ interface GlbalProps {
     setRouter: Function
 }
 
-export const Global = React.createContext<GlbalProps>({
+export const GlobalContext = React.createContext<GlobalProps>({
     sdk: {} as SnackSDK,
     // 国际化
     setLocale: () => {
@@ -62,4 +62,5 @@ export const Global = React.createContext<GlbalProps>({
     setRouter: () => {
     },
 });
-export default Global;
+
+export const useGlobalContxt = () => React.useContext(GlobalContext);
