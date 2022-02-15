@@ -3,15 +3,15 @@
  * @date 2021/11/26 11:07
  * @description 头部导航
  */
-import React, {FunctionComponent, useState, useContext} from 'react';
+import React, {FunctionComponent, useState} from 'react';
 import PageHeader from '@para-ui/core/PageHeader';
 import ParaBreadcrumbs from "@para-ui/core/Breadcrumbs";
 import ArrowRightFull from '@para-ui/icons/RightCircleF';
 import LanguageChinese from "@para-ui/icons/Chinese";
 import LanguageEnglish from "@para-ui/icons/English";
 import Voice from "@para-ui/icons/Remind";
-import Quit from "@para-ui/icons/Off";
-import Global from "../../../context/global";
+import Quit from '@para-ui/icons/Off';
+import {useGlobalContext} from '../../../context/global';
 import './index.scss';
 
 interface Props {
@@ -23,7 +23,7 @@ const Header: FunctionComponent<Props> = (props: Props) => {
     const {
         locale,
         setLocale
-    } = useContext(Global);
+    } = useGlobalContext()
 
 
     /**

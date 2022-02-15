@@ -1,6 +1,6 @@
-import React, {FunctionComponent} from "react";
-import Global from "../../../context/global";
-import ParaMenu from "@para-ui/core/Menu";
+import React, {FunctionComponent} from 'react';
+import {useGlobalContext} from '../../../context/global';
+import ParaMenu from '@para-ui/core/Menu';
 import {version} from '../../../../package.json';
 
 import "./index.scss";
@@ -13,7 +13,7 @@ interface Props {
 const defaultUrl: string = '/home';
 
 const Menu: FunctionComponent<Props> = (props: Props) => {
-    const {menu, router, setRouter} = React.useContext(Global);
+    const {menu, router, setRouter} = useGlobalContext();
     // 菜单渲染数据
     const [menuList, setMenuList] = React.useState<any[]>([]);
     // 菜单是否展开

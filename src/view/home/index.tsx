@@ -1,9 +1,9 @@
 import React, {FunctionComponent} from 'react';
-import {useHistory} from 'react-router-dom'
+import {useHistory} from 'react-router-dom';
 import Icon from '../../assets/icon.png';
 import {useFormatMessage} from 'react-intl-hooks';
-import {languages} from '../../locale/index'
-import Global from '../../context/global'
+import {languages} from '../../locale';
+import {useGlobalContext} from '../../context/global';
 
 import './index.scss';
 
@@ -14,7 +14,7 @@ interface Props {
 const Home: FunctionComponent = (props: Props) => {
     const history = useHistory();
     // 引用全局共享数据context
-    const {setLocale, locales, locale, Message, Confirm} = React.useContext(Global);
+    const {setLocale, locales, locale, Message, Confirm} = useGlobalContext();
     const intl = useFormatMessage();
 
     const changeLang = async (locale: languages) => {

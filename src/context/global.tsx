@@ -28,39 +28,28 @@ interface GlobalProps {
 export const GlobalContext = React.createContext<GlobalProps>({
     sdk: {} as SnackSDK,
     // 国际化
-    setLocale: () => {
-    },
+    setLocale: () => {},
     locales: {},
     locale: '',
 
     // 菜单
-    setMenu: () => {
-    },
+    setMenu: () => {},
     menu: [],
     // 全局消息提示
     Message: {
-        info: () => {
-        },
-        error: () => {
-        },
-        success: () => {
-        },
-        warn: () => {
-        }
+        info: () => {},
+        error: () => {},
+        success: () => {},
+        warn: () => {}
     },
     Confirm: {
-        info: () => {
-        },
-        error: () => {
-        },
-        success: () => {
-        },
-        warn: () => {
-        }
+        info: () => {},
+        error: () => {},
+        success: () => {},
+        warn: () => {}
     },
     router: '',
-    setRouter: () => {
-    },
+    setRouter: () => {},
 });
 
-export const useGlobalContxt = () => React.useContext(GlobalContext);
+export const useGlobalContext = () => React.useContext(GlobalContext);

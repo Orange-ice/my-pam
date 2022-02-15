@@ -1,21 +1,19 @@
-import React, {FunctionComponent, useEffect, useContext, useState} from 'react';
-import Global from "../../context/global";
-import Loading from "../loading";
+import React, {FunctionComponent, useEffect, useState} from 'react';
+import {useGlobalContext} from '../../context/global';
+import Loading from '../loading';
 
 import './index.scss';
 
 
 interface Props {
-    typePage: 'snack' | 'snackPage' // 页面类型
-    type?: string // 分类
-    name?: string // snack
-    id?: string // snackPage
+    typePage: 'snack' | 'snackPage'; // 页面类型
+    type?: string; // 分类
+    name?: string; // snack
+    id?: string; // snackPage
 }
 
 const SnackFrame: FunctionComponent<Props> = (props: Props) => {
-    const {
-        sdk
-    } = useContext(Global);
+    const {sdk} = useGlobalContext();
     const [snackModule, setSnackModule] = useState<any>();
 
     const {

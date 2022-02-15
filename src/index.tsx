@@ -15,10 +15,11 @@ import Debugger from '@paraview/lib/debugger';
 
 
 
+
 /* @dynamic end */
 
 /* @dynamic version */
-window.ParaWeb = {name:'para-react-cli',version: '2.0.1', env: 'dev', buildTime: '2022/2/15 下午3:40:37'}
+window.ParaWeb = {name:'para-react-cli',version: '2.0.1', env: 'dev', buildTime: '2022/2/15 下午4:51:52'}
 /* @dynamic end */
 
 const init = async (debug: Array<string> = []) => {
@@ -43,5 +44,5 @@ const init = async (debug: Array<string> = []) => {
 };
 
 /* @dynamic init */
-init(["http://192.168.7.27"])
+init(["http://192.168.7.27","http://192.168.3.1:10000","http://192.168.2.83:10000","http://10.10.2.48:10000"])
 /* @dynamic end */

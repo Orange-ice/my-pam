@@ -1,17 +1,17 @@
-import React, {FunctionComponent, Suspense, lazy, useContext, useEffect} from 'react'
-import {HashRouter, Route, Switch} from 'react-router-dom'
+import React, {FunctionComponent, Suspense, lazy, useEffect} from 'react';
+import {HashRouter, Route, Switch} from 'react-router-dom';
 import routeConfig, {RouterConfig} from './config/router';
 
 import Loading from "./components/loading";
-import Iframe from "./components/iframe";
-import Global from "./context/global";
-import ErrorPage from "./components/errorPage";
+import Iframe from './components/iframe';
+import {useGlobalContext} from './context/global';
+import ErrorPage from './components/errorPage';
 
 const SnackFrame = lazy(() => import('./components/snackFrame'));
 
 let RouterInit: boolean = false; // 路由初始化标记
 const Root: FunctionComponent = () => {
-    const {setMenu} = useContext(Global);
+    const {setMenu} = useGlobalContext();
     const [router, setRouter] = React.useState<Array<RouterConfig>>([]);
 
     useEffect(() => {
